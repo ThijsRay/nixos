@@ -1,0 +1,9 @@
+keys:
+  - &admin_thijs_odysseus age1ay4l7j75fnvfkk7pr8ye0ar0k5gmzd9apen9tj24fh0p42kc94qq0e7utq
+  - &server_odysseus age1ccthurufgmulxhrk70kneen6eh3gtglpgqvz7kt5nv6av40xkaeqsqz6t5
+creation_rules:
+  - path_regex: secrets/odysseus/[^/]+\.(yaml|env)$
+    key_groups:
+    - age:
+      - *admin_thijs_odysseus
+      - *server_odysseus
