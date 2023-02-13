@@ -13,7 +13,7 @@
   sops.secrets."restic/password" = {};
 
   services.restic.backups.backblaze = {
-    s3CredentialsFile = "/run/secrets/restic/api_credentials";
+    environmentFile = "/run/secrets/restic/api_credentials";
     repositoryFile = "/run/secrets/restic/repository";
     passwordFile = "/run/secrets/restic/password";
     initialize = true;
