@@ -19,6 +19,7 @@
 				./hardware-configuration.nix
         ./services/restic.nix
         ./services/dendrite.nix
+        ./services/nginx.nix
 			];
 		};
 	};
