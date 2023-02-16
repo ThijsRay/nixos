@@ -1,9 +1,9 @@
-{ sops-nix, ... }: {
-  sops.secrets."dendrite/private_key" = {};
-  
   let
     connection_string = "postgresql://dendrite@localhost/dendrite?sslmode=disable";
   in
+{ sops-nix, ... }: {
+  sops.secrets."dendrite/private_key" = {};
+  
   services.dendrite = {
     enable = true;
     settings = {
