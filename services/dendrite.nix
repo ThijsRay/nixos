@@ -1,9 +1,10 @@
   let
     connection_string = "postgresql://dendrite@localhost/dendrite?sslmode=disable";
+    user = "dendrite";
   in
 { sops-nix, ... }: {
   sops.secrets."dendrite/private_key" = {
-    owner = "dendrite";
+    owner = dendrite;
   };
   
   services.dendrite = {
@@ -31,5 +32,10 @@
       federation_api.database.connection_string = connection_string;
       app_service_api.database.connection_string = connection_string;
     };
+  };
+
+  systemd.services.dendrite.serviceConfig = {
+    DynamicUser = false;
+    User = dendrite;
   };
 }
