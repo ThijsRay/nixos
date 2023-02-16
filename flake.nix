@@ -17,6 +17,7 @@
         ./backup.nix
 				./configuration.nix
 				./hardware-configuration.nix
+        ./dendrite.nix
         sops-nix.nixosModules.sops
 			];
 		};
