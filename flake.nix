@@ -21,6 +21,7 @@
         ./services/restic.nix
         ./services/dendrite.nix
         ./services/nginx.nix
+        ./services/postgres.nix
 			];
 		};
 	};
