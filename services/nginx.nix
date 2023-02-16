@@ -9,6 +9,7 @@
     recommendedProxySettings = true;
     recommendedOptimisation = true;
     recommendedGzipSettings = true;
+    recommendedTlsSettings = true;
 
     virtualHosts."matrix.raymakers.nl" = {
       forceSSL = true;
