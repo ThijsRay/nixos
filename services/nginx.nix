@@ -1,4 +1,6 @@
 { ... }: {
+  systemd.user.units."acme-matrix.raymakers.nl.service".enable = false;
+  systemd.user.timers."acme-matrix.raymakers.nl.timer".enable = false;
   security.acme = {
     acceptTerms = false;
     defaults.email = "thijs@raymakers.nl";
