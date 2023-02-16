@@ -17,6 +17,7 @@
 				./devtools.nix
 				./configuration.nix
 				./hardware-configuration.nix
+        ./networking.nix
         ./services/restic.nix
         ./services/dendrite.nix
         ./services/nginx.nix
