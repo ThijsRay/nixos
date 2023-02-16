@@ -4,7 +4,7 @@
   in
 { sops-nix, ... }: {
   sops.secrets."dendrite/private_key" = {
-    owner = dendrite;
+    owner = user;
   };
   
   services.dendrite = {
@@ -36,6 +36,6 @@
 
   systemd.services.dendrite.serviceConfig = {
     DynamicUser = false;
-    User = dendrite;
+    User = user;
   };
 }
