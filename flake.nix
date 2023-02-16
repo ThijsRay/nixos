@@ -13,12 +13,12 @@
 			specialArgs = { inherit inputs; };
 			modules = [
         ./sops.nix
+        sops-nix.nixosModules.sops
 				./devtools.nix
-        ./backup.nix
 				./configuration.nix
 				./hardware-configuration.nix
-        ./dendrite.nix
-        sops-nix.nixosModules.sops
+        ./services/restic.nix
+        ./services/dendrite.nix
 			];
 		};
 	};
