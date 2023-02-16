@@ -1,10 +1,6 @@
 { ... }: {
-  systemd.services."acme-matrix.raymakers.nl.service".enable = false;
-  systemd.services."acme-matrix.raymakers.nl".enable = false;
-  systemd.timers."acme-matrix.raymakers.nl.timer".enable = false;
-  systemd.timers."acme-matrix.raymakers.nl".enable = false;
   security.acme = {
-    acceptTerms = false;
+    acceptTerms = true;
     defaults.email = "thijs@raymakers.nl";
     defaults.server = "https://acme-staging-v02.api.letsencrypt.org/directory";
   };
@@ -15,9 +11,9 @@
     recommendedGzipSettings = true;
 
     virtualHosts."matrix.raymakers.nl" = {
-      # forceSSL = true;
-      enableACME = false;
-      # http2 = true;
+      forceSSL = true;
+      enableACME = true;
+      http2 = true;
       locations."/" = {
         proxyWebsockets = true;
         proxyPass = "http://www.example.org/";
