@@ -2,7 +2,9 @@
     connection_string = "postgresql://dendrite@localhost/dendrite?sslmode=disable";
   in
 { sops-nix, ... }: {
-  sops.secrets."dendrite/private_key" = {};
+  sops.secrets."dendrite/private_key" = {
+    owner = "dendrite";
+  };
   
   services.dendrite = {
     enable = true;
