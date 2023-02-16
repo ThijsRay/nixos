@@ -35,7 +35,7 @@
   };
 
   systemd.services.dendrite.serviceConfig = {
-    DynamicUser = false;
+    DynamicUser = mkOverride 10 false;
     User = user;
   };
 }
