@@ -25,5 +25,8 @@
 				"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMLBbTukN9Wxeu6i0uNv3z0nft5MqlR+Ou+EKFpqySY9 thijs" 
 			];
 		};
+    dendrite = {
+      isSystemUser = true;
+    };
   };
 }

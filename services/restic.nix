@@ -10,6 +10,7 @@
     initialize = true;
     paths = [
       "/home"
+      "/var/backup/postgresql"
     ];
     user = "root";
     timerConfig = {
