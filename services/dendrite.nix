@@ -2,7 +2,7 @@
     connection_string = "postgresql://dendrite@localhost/dendrite?sslmode=disable";
     user = "dendrite";
   in
-{ sops-nix, nixpkgs, ... }: {
+{ sops-nix, pkgs, ... }: {
   sops.secrets."dendrite/private_key" = {
     owner = user;
   };
@@ -35,7 +35,7 @@
   };
 
   systemd.services.dendrite.serviceConfig = {
-    DynamicUser = nixpkgs.lib.mkOverride 10 false;
+    DynamicUser = pkgs.lib.mkOverride 10 false;
     User = user;
   };
 }
