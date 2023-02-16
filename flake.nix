@@ -12,6 +12,7 @@
 			system = "x86_64-linux";
 			specialArgs = { inherit inputs; };
 			modules = [
+        ./sops.nix
 				./devtools.nix
         ./backup.nix
 				./configuration.nix
