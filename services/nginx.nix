@@ -1,5 +1,8 @@
 { ... }: {
-  security.acme.acceptTerms = true;
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "thijs@raymakers.nl";
+  };
   services.nginx = {
     enable = true;
     recommendedProxySettings = true;
