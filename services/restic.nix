@@ -11,6 +11,7 @@
     paths = [
       "/home"
       "/var/backup/postgresql"
+      "/var/lib/dendrite/media_store"
     ];
     user = "root";
     timerConfig = {

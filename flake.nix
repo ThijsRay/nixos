@@ -22,6 +22,7 @@
         ./services/dendrite.nix
         ./services/nginx.nix
         ./services/postgres.nix
+        ./services/dendrite.nix
 			];
 		};
 	};
