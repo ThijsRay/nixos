@@ -28,7 +28,7 @@
       };
       dendrite = {
         isSystemUser = true;
-        group = "dendrite"
+        group = "dendrite";
       };
     };
     groups = {
