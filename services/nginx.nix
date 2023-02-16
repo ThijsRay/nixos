@@ -15,10 +15,10 @@
     recommendedGzipSettings = true;
 
     virtualHosts."matrix.raymakers.nl" = {
-      forceSSL = true;
+      # forceSSL = true;
       enableACME = false;
-      http2 = true;
-      http3 = true;
+      # http2 = true;
+      # http3 = true;
       locations."/" = {
         proxyWebsockets = true;
         proxyPass = "http://www.example.org/";
