@@ -1,7 +1,7 @@
 { ... }: {
   services.postgres = {
     enable = true;
-    ensureDatabases = [ dendrite ];
+    ensureDatabases = [ "dendrite" ];
     ensureUsers = [
       {
         name = "dendrite";
@@ -14,7 +14,7 @@
 
   services.postgresqlBackup = {
     enable = true;
-    databases = [ dendrite ];
+    databases = [ "dendrite" ];
     location = "/var/backup/postgresql";
   };
 }
