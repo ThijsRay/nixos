@@ -16,7 +16,7 @@
       http2 = true;
       locations."/" = {
         proxyWebsockets = true;
-        proxyPass = "http://localhost:8080/";
+        proxyPass = "http://localhost:8008/";
       };
     };
   };
