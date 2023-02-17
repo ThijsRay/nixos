@@ -28,6 +28,7 @@
       global = {
         server_name = "matrix.raymakers.nl";
         private_key = "/run/secrets/dendrite/private_key";
+        well_known_server_name = "raymakers.nl";
       };
       federation_api.database.connection_string = connection_string;
       app_service_api.database.connection_string = connection_string;
