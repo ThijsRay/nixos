@@ -1,5 +1,5 @@
   let
-    connection_string = "postgresql://dendrite@localhost/dendrite?sslmode=disable&requirepeer=dendrite";
+    connection_string = "postgresql://dendrite/dendrite?sslmode=disable&requirepeer=dendrite";
     user = "dendrite";
   in
 { sops-nix, pkgs, ... }: {
