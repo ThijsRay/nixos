@@ -1,7 +1,7 @@
 { ... }: {
   networking = {
     firewall = {
-      allowedTCPPorts = [ 22 80 443 ];
+      allowedTCPPorts = [ 22 80 443 8448 ];
     };
     enableIPv6 = true;
     defaultGateway6 = {

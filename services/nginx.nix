@@ -11,6 +11,8 @@
     recommendedTlsSettings = true;
 
     virtualHosts."matrix.raymakers.nl" = {
+      listen = [ 80 443 8448 ];
+
       forceSSL = true;
       enableACME = true;
       http2 = true;
